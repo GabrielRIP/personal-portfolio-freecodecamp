@@ -1,0 +1,61 @@
+@use 'colors' as *;
+
+.main {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 2.5rem);
+  z-index: 5;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+#welcome-section {
+  height: calc(100vh - 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  font-family: monospace;
+  & .title {
+    color: cyan;
+    border: 1px solid cyan;
+    padding: 5px 1rem;
+    font-size: 2em;
+    text-shadow: 100px 100px 2px rgba(0, 150, 250, 0.2),
+                 -100px -100px 2px rgba(0, 150, 250, 0.2);
+  }
+  & .subTitle {
+    color: tomato;
+    text-shadow: 0 0 15px #888888;
+    font-size: 1.3em;
+    border: 1px solid white;
+    padding: 5px 1rem;
+  }
+  @media (min-height: 430px) {
+    .title {
+      text-shadow: 100px 100px 2px rgba(0, 150, 250, 0.2),
+                  -100px 200px 2px rgba(0, 150, 250, 0.2),
+                  -100px -100px 2px rgba(0, 150, 250, 0.2),
+                  100px -200px 2px rgba(0, 150, 250, 0.2);
+    }
+  }
+  @media (min-width: 1000px) and (min-height: 800px) {
+    .title {
+      text-shadow: -280px 100px 2px rgba(230, 230, 230, 0.1),
+                  100px 100px 2px rgba(0, 150, 250, 0.1),
+                  -100px 200px 2px rgba(0, 150, 250, 0.1),
+                  280px 200px 2px rgba(230, 230, 230, 0.1),
+                  100px 300px 2px rgba(0, 150, 0, 0.2),
+
+                  -100px -100px 2px rgba(0, 150, 250, 0.1),
+                  280px -100px 2px rgba(230, 230, 230, 0.1),
+                  100px -200px 2px rgba(0, 150, 250, 0.1),
+                  -280px -200px 2px rgba(230, 230, 230, 0.1),
+                  -100px -300px 2px rgba(0, 150, 0, 0.2),
+    }
+  }
+}

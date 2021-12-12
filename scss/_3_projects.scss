@@ -1,0 +1,76 @@
+@use 'colors' as *;
+
+#projects {
+  background-color: #2b5278;
+  padding: 3rem 1rem 5rem 1rem;
+  & .projectsTitle {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid white;
+  }
+  & .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 3rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 5rem auto;
+  }
+  & button {
+    display: block;
+    background-color: #484847;
+    margin: 0 auto;
+    border: none;
+    height: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    & a {
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.5em;
+      padding: 0 2rem;
+      color: tomato;
+    }
+    &:hover {
+      background-color: tomato;
+      & a {
+        color: white;
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+.project-tile {
+  text-decoration: none;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  & .projectImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3px 3px 0 0 ;
+  }
+  & .projectText {
+    color: white;
+    padding: .8rem 0;
+    font-weight: 700;
+    background-color: #272822;
+    border-radius: 0 0 3px 3px;
+  }
+  &:hover > .projectText {
+    color: tomato;
+    font-weight: 900;
+    background-color: #474747;
+  }
+  &:hover {
+    border-color: tomato;
+  }
+}

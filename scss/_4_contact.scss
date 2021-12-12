@@ -1,0 +1,41 @@
+#contact {
+  padding: 5rem 2rem;
+  text-align: center;
+  & h2 {
+    color: #181818;
+    font-weight: 700;
+    font-size: 3em;
+  }
+  & h3 {
+    color: #282828;
+    font-size: 1.5em;
+    margin-bottom: 4rem;
+  }
+}
+
+.boxContact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  & a {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    gap: .5rem;
+    color: #484848;
+    border: 2px solid #484848;
+    & svg {
+      width: 1.5rem;
+    }
+    &:hover {
+      border-color: tomato;
+      & svg {
+        color: tomato;
+      }
+      & p {
+        color: tomato;
+      }
+    }
+  }
+}

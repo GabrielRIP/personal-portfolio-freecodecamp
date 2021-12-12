@@ -1,0 +1,14 @@
+// html, body, nav
+@forward '1_header';
+
+// Box de bienvenida.
+@forward '2_welcome';
+
+// Box Para los Proyectos
+@forward '3_projects';
+
+// Box para Los contactos
+@forward '4_contact';
+
+// Box para el Footer
+@forward '5_footer';
